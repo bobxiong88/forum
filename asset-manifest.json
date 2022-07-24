@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/forum/static/css/main.7bfd3160.css",
-    "main.js": "/forum/static/js/main.c07ab84a.js",
+    "main.js": "/forum/static/js/main.7f0233f1.js",
     "static/media/tahomabd.ttf": "/forum/static/media/tahomabd.4e8caff4c73e456e09a0.ttf",
     "static/media/8.png": "/forum/static/media/8.16cde643d6fc3a30d6ac.png",
     "static/media/3.png": "/forum/static/media/3.04a11673bf2e80e3e570.png",
@@ -14,10 +14,10 @@
     "static/media/logo.jpg": "/forum/static/media/logo.071595cc24f376b8fb69.jpg",
     "index.html": "/forum/index.html",
     "main.7bfd3160.css.map": "/forum/static/css/main.7bfd3160.css.map",
-    "main.c07ab84a.js.map": "/forum/static/js/main.c07ab84a.js.map"
+    "main.7f0233f1.js.map": "/forum/static/js/main.7f0233f1.js.map"
   },
   "entrypoints": [
     "static/css/main.7bfd3160.css",
-    "static/js/main.c07ab84a.js"
+    "static/js/main.7f0233f1.js"
   ]
 }
