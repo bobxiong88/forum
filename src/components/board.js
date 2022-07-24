@@ -34,17 +34,24 @@ import React, { useState, useEffect } from 'react';
 import boards from './boards';
 import "../styles/board.css";
 import cross from "../images/cross.png";
-import placeholder from "../images/placeholder.png";
 
 import uniqid from 'uniqid';
 
 function randomIntFromInterval(min, max) { // min and max included 
     return Math.floor(Math.random() * (max - min + 1) + min)
-  }
+}
+
+function compare(a,b){
+    if (a.data().time > b.data().time){
+        return -1;
+    } else{
+        return 1;
+    }
+}
   
 function importAll(r) {
     return r.keys().map(r);
-  }
+}
   
 const images = importAll(require.context('../images/randos/', false, /\.(png|jpe?g|svg)$/));
 
@@ -102,7 +109,8 @@ function Board(){
                 file: fileId,
                 fileName: (fileId) ? popup.elements["file"].value.split("\\").at(-1):0,
                 id: uniqid(),
-                messageId: randomIntFromInterval(387962515,487962515)
+                messageId: randomIntFromInterval(387962515,487962515),
+                time: time.getTime()
             });
             threads.removeChild(document.querySelector(`#${popupId}`));
         }
@@ -132,8 +140,10 @@ function Board(){
         }
 
         const loadThreads = async() => {
-            const querySnapshot = await getDocs(dbref);
-            for(let doc of querySnapshot.docs){
+            const querySnapshot = await getDocs(dbref ,orderBy("time"));
+            let threadList = [...querySnapshot.docs];
+            threadList.sort(compare);
+            for(let doc of threadList){
                 console.log(doc.id, "=>", doc.data());
                 const threadData = doc.data();
                 const imgRef = await ref(storage, `${boardId}/${threadData.id}/${threadData.file}`);
@@ -162,7 +172,9 @@ function Board(){
                     makeReply(threadData.messageId, threadData.id, doc.id);
                 });
                 const queryReplies = await getDocs(collection(db, `${boardId}/${doc.id}/replies`));
-                for (let rep of queryReplies.docs){
+                let replies = [...queryReplies.docs];
+                replies.sort(compare);
+                for (let rep of replies){
                     console.log("reply ", rep.id, "=>", rep.data());
                     const repData = rep.data();
                     const reply = document.createElement("div");
@@ -249,7 +261,8 @@ function Board(){
                 fileName: threadForm.elements["file"].value.split("\\").at(-1),
                 id: threadId,
                 messageId: randomIntFromInterval(387962515,487962515),
-                date: `${time.toLocaleDateString()}(${weekDay[time.getDay()]})${time.toLocaleTimeString()}`
+                date: `${time.toLocaleDateString()}(${weekDay[time.getDay()]})${time.toLocaleTimeString()}`,
+                time: time.getTime()
             });
             console.log("sent!");
             newThreadContainer.innerHTML = '[<a id = "newThread">Start a New Thread</a>]';
