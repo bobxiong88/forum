@@ -4,7 +4,7 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-const firebaseConfig = {
+const config = {
   apiKey: "AIzaSyAsvMxorm0HrwQlbgeI3A1dOzGJY3Z3TZ8",
   authDomain: "forum-a9414.firebaseapp.com",
   projectId: "forum-a9414",
@@ -14,4 +14,11 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+export function getFirebaseConfig() {
+  if (!config || !config.apiKey) {
+    throw new Error('No Firebase configuration object provided.' + '\n' +
+    'Add your web app\'s configuration object to firebase-config.js');
+  } else {
+    return config;
+  }
+}

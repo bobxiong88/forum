@@ -1,0 +1,93 @@
+@font-face {
+    font-family: "tahoma";
+    src: url("../fonts/tahomabd.ttf");
+}
+
+ul{
+    list-style-type: none;
+}
+
+#logoImg{
+    width: 96px;
+    height: 96px;
+}
+#logo{
+    height: 96px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    font-family: Tahoma;
+    color: #800;
+    font-size: 56px;
+    letter-spacing: -4px;
+    gap: 10px;
+    padding: 18px;
+
+}
+
+.blob{
+    width: 760px;
+    margin-left: auto;
+    margin-right:auto;
+    border: 1px solid black;
+}
+
+#notice{
+    margin-bottom: 8px;
+}
+
+.top{
+    font-size:16px;
+    padding-left: 6px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.bottom{
+    line-height: 18px;
+    font-size: 12px; 
+    background-color: white;
+    padding-left: 6px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#announcementTop{
+    font-weight: 901;
+    background-color: #800;
+    color: white;
+}
+
+#boards{
+    color: #800;
+    margin-bottom: 8px;
+    border: 1px solid #800;
+}
+
+#boardsTop{
+    background-color: #fca;
+}
+
+#boardsBottom{
+    display: flex;
+    padding-right: 6px;
+    gap: 16px;
+}
+
+.header{
+    font-weight: 700;
+    text-decoration-line: underline;
+}
+
+#popular{
+    color: #800;
+    margin-bottom: 8px;
+    border: 1px solid #800;
+}
+
+#popularTop{
+    background-color: #fca;
+}
+#popularBottom{
+    background-color: white;
+}

@@ -1,0 +1,12 @@
+*{
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page{
+    background: #ffe url(../images/back.png) top repeat-x;
+    min-height: 100vh;
+}
+
