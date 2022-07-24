@@ -25,12 +25,12 @@ function Home() {
                 <div class = "bottom" id = "boardsBottom">
                     <ul id = "vidya">
                         <li class = "header">Video Games</li>
-                        <li><a href = "/vg">Video Games</a></li>
+                        <li><a href = "#/board/vg">Video Games</a></li>
                     </ul>
                     <ul>
                         <li class = "header">Misc.</li>
-                        <li><a href = "/b">Random</a></li>
-                        <li><a href = "/pol">Politically Incorrect</a></li>
+                        <li><a href = "#/board/b">Random</a></li>
+                        <li><a href = "#/board/pol">Politically Incorrect</a></li>
                     </ul>
                     {/*
                     <ul id = "jap">

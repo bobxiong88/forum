@@ -55,7 +55,9 @@ function Board(){
     const rndInt = randomIntFromInterval(1,8);
 
     // getting current board
-    const boardId = window.location.pathname.slice(1);
+    console.log(window.location.href);
+    const boardId = window.location.href.split("/").at(-1);
+    console.log(`you are now at ${boardId}`);
     const board = boards[boardId];
 
     // load up the database
@@ -205,7 +207,7 @@ function Board(){
         leftNav.innerHTML += "[";
         for (let b of boardList){
             const bLink = document.createElement("a");
-            bLink.setAttribute("href", `/${b}`);
+            bLink.setAttribute("href", `#/board/${b}`);
             bLink.textContent = `${b}`;
             leftNav.appendChild(bLink);
             if(b !== boardList[boardList.length-1])leftNav.innerHTML += "&nbsp/&nbsp";
@@ -250,7 +252,7 @@ function Board(){
                 date: `${time.toLocaleDateString()}(${weekDay[time.getDay()]})${time.toLocaleTimeString()}`
             });
             console.log("sent!");
-            newThreadContainer.innerHTML = '[<a href = "#" id = "newThread">Start a New Thread</a>]';
+            newThreadContainer.innerHTML = '[<a id = "newThread">Start a New Thread</a>]';
             document.querySelector("#newThread").addEventListener("click", makeThread);
         }
 
@@ -282,8 +284,7 @@ function Board(){
 
         newThread.addEventListener("click", makeThread);
         return (()=>{
-            newThreadContainer.innerHTML = '[<a href = "#" id = "newThread">Start a New Thread</a>]';
-            document.querySelector("#newThread").addEventListener("click", makeThread);
+            newThreadContainer.innerHTML = '[<a id = "newThread">Start a New Thread</a>]';
         });
     },[]);
 
@@ -291,16 +292,16 @@ function Board(){
         <div className = "page" id = {boardId}>
             <div id = "navbar">
                 <div id = "leftNav"></div>
-                <div id = "rightNav">[<a href = "/">Home</a>]</div>
+                <div id = "rightNav">[<a href = "#/home">Home</a>]</div>
             </div>
             <div id = "rando" style = {{backgroundImage:`url(./randos/${rndInt}.png)`}}></div>
             <div id = "intro">/{boardId}/ - {board.name}</div>
             <hr class = "bar" id = "divOne"/>
-            <div id = "newThreadContainer">[<a href = "#" id = "newThread">Start a New Thread</a>]</div>
+            <div id = "newThreadContainer">[<a id = "newThread">Start a New Thread</a>]</div>
             <hr class = "bar" id = "divTwo"/>
             <div id = "updates">
-                <div>07/22/22 New boards added: <a href = "/vg" class = "a">/vg/</a></div>
-                <div>07/19/22 New boards added: <a href = "/b" class = "a">/b/</a>, <a href = "/pol" class = "a">/pol/</a></div>
+                <div>07/22/22 New boards added: <a href = "#/board/vg" class = "a">/vg/</a></div>
+                <div>07/19/22 New boards added: <a href = "#/board/b" class = "a">/b/</a>, <a href = "#/board/pol" class = "a">/pol/</a></div>
                 <div>07/18/22 Genesis: website is created</div>
             </div>
             <hr class = "bar" id = "divThree"/>
