@@ -1,21 +1,18 @@
 import '../styles/home.css';
 import '../fonts/tahomabd.ttf';
 import Logo from '../images/logo.jpg';
+// <img src = {Logo} alt = "genshin" id = "logoImg"/>
 function Home() {
     return (
         <div className = "page" id = "home">
             
-            <div id = "logo"><img src = {Logo} alt = "genshin" id = "logoImg"/>gpo</div>
+            <div id = "logo"><img src = "" alt = "genshin" id = "logoImg"/>gpo</div>
             <div id = "notice" class = "blob">
                 <h2 class = "top" id = "announcementTop">
                     What is gpo?
                 </h2>
                 <div class = "bottom" id = "announcementBottom">
-                    Good players only is a simple Discord chat where the "good players" post racist and misogynist comments and
-                    share their most depressing thoughts. There are channels dedicated to a variety of topics,
-                     from larping and masturbating to rolls, music and pornography. Users are ranked based on
-                      dick size  before being allowed to participate in the community.
-                      Feel free to click on a channel and start chatting!
+                    Disclaimer: This website is a satire. I made it to test my programming skills by implementing an early 2000s website using React.js and Firebase.  
                     <br/><br/>
                     Be sure to familiarize yourself with the #rules before posting and read the pinned messages if you wish to learn more about the lore.
                 </div>
@@ -30,13 +27,12 @@ function Home() {
                     <ul>
                         <li class = "header">Misc.</li>
                         <li><a href = "#/board/b">Random</a></li>
-                        <li><a href = "#/board/pol">Politically Incorrect</a></li>
+                        <li><a href = "#/board/pol">World News</a></li>
                     </ul>
                     {/*
                     <ul id = "jap">
                         <li class = "header">Japanese Culture</li>
                         <li>Anime & Manga</li>
-                        <li>Japan hate</li>
                     </ul>
                     <ul id = "vidya">
                         <li class = "header">Video Games</li>
@@ -49,7 +45,6 @@ function Home() {
                         <li>Gym</li>
                         <li>Biking</li>
                         <li>Jogging</li>
-                        <li>Racism</li>
                     </ul>
                     <ul>
                         <li class = "header">Creative</li>
@@ -60,11 +55,6 @@ function Home() {
                         <li  class = "header">Other</li>
                         <li>Business & Finance</li>
                         <li>Dreams</li>
-                    </ul>
-
-                    <ul>
-                        <li class = "header">Adult</li>
-                        <li>Adult GIF</li>
                     </ul>
                     */}
                 </div>
