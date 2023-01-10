@@ -75,7 +75,7 @@ function Board(){
     const storage = getStorage();
     
 
-    // to initialize all the shit
+    // to initialize all elements
     useEffect(()=>{
         // element selectors
         const navbar = document.querySelector("#navbar");

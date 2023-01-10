@@ -6,7 +6,7 @@ function Home() {
     return (
         <div className = "page" id = "home">
             
-            <div id = "logo"><img src = "" alt = "genshin" id = "logoImg"/>gpo</div>
+            <div id = "logo"><img src = "" alt = "genshin" id = "logoImg"/>Forum</div>
             <div id = "notice" class = "blob">
                 <h2 class = "top" id = "announcementTop">
                     What is gpo?
