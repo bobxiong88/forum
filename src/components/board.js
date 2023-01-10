@@ -59,7 +59,7 @@ const weekDay = ["Sun", "Mon", "Tue", "Thu", "Wed", "Fri", "Sat"]
 
 function Board(){
     // rolling for rando iamge
-    const rndInt = randomIntFromInterval(1,8);
+    const rndInt = randomIntFromInterval(1,3);
 
     // getting current board
     console.log(window.location.href);

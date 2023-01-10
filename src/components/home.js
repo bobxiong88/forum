@@ -1,6 +1,6 @@
 import '../styles/home.css';
 import '../fonts/tahomabd.ttf';
-import Logo from '../images/logo.jpg';
+//import Logo from '../images/logo.jpg';
 // <img src = {Logo} alt = "genshin" id = "logoImg"/>
 function Home() {
     return (
