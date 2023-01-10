@@ -1,12 +1,12 @@
 import '../styles/home.css';
 import '../fonts/tahomabd.ttf';
-import Logo from '../images/logo.jpg';
+// import Logo from '../images/logo.jpg';
 // <img src = {Logo} alt = "genshin" id = "logoImg"/>
 function Home() {
     return (
         <div className = "page" id = "home">
             
-            <div id = "logo"><img src = "" alt = "genshin" id = "logoImg"/>gpo</div>
+            <div id = "logo"><img src = "" alt = "genshin" id = "logoImg"/>Forum</div>
             <div id = "notice" class = "blob">
                 <h2 class = "top" id = "announcementTop">
                     What is gpo?
